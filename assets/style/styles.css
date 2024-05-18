@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Loved+by+the+King&family=Pixelify+Sans:wght@400;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url(./firstPage.css);
+@import url(../../login/loginStyle.css);
+@import url(../../cadastro/cadastroStyles.css);
+@import url(../../dashboard/stylesDashboard.css);
+@import url(../../jornada/step1-jornada/step1-jornada.css);
+@import url(../../jornada/step2-jornada/step2-jornada.css);
+@import url(../../jornada/step3-jornada/step3-jornada.css);
+
+/*Cores e Fonte*/
+:root {
+    --black: #000000; 
+    --white: #FFFFFF;
+    --yellow:#F5BA41;
+    --backgroundBody: #FAFAFA;
+    --borderButton: #F4F8FB;
+
+    --greenMain: #007d06;
+    --greenSecondary: #26CC2F;
+    --fontColor: #3bc942;
+
+    --cor2: #00ab09;
+    --cor3: #1c9322;
+    --cor5: #004a04;
+
+    --grey800: #39434F;
+    --grey700: #606873;
+    --grey600: #808B9A;
+    --grey400: #B3BECD;
+    --grey200: #D9DFE6;
+    --grey150:#ECEFF2;
+    --grey100: #F7FAFC;
+    
+    --primaryFont: 'Poppins', sans-serif;
+} 
+
+*:focus {
+    outline: 0;
+}
+
+a,i{
+    transition: .5s;
+    text-decoration: none;
+}
+
+html{
+    font-family: var(--primaryFont);
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--grey800);
+    background-color: var(--backgroundBody);
+}
