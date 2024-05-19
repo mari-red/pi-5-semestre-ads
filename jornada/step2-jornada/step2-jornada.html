@@ -92,9 +92,6 @@
         <script type="module">
             import { supabase, user } from '/supabase-utils.js'
 
-            console.log("user ext" +user)
-            console.table(user.data.user.id)
-
             document.getElementById('continua').addEventListener('click', function (){
                 continuar()
             });
@@ -110,17 +107,8 @@
                     if (radioButton.checked) {
                         // Obtém o valor do radio button selecionado
                         valorSelecionado = radioButton.id;
-                        console.log("Radio button selecionado:", valorSelecionado)
-
                     }
                 });
-
-                console.log("user abaixo")
-                console.log(user)
-                // console.log("data abaixo")
-                // console.log(data)
-
-
 
                 // Captura idade, altura e peso
                 let idade = document.getElementById('ageInput').value;

@@ -65,14 +65,8 @@
                     if (radioButton.checked) {
                         // Obtém o valor do radio button selecionado
                         frequenciaSelecionada = radioButton.id;
-                        console.log("Radio button selecionado:", frequenciaSelecionada)
-
                     }
                 });
-
-                console.log("user abaixo")
-                console.log(user.data.user.id)
-
 
                 supabase
                     .from('caracteristicas')
