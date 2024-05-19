@@ -8,11 +8,13 @@
         <link rel="stylesheet" href="../assets/style/styles.css">
 
         <title>Dashboard</title>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.33.1/dist/umd/supabase.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
     </head>
     <body>
         <header class="headerDashboard">
             <img class="headerDashboard__perfil" src="../assets/image/Avatar.svg" alt="Perfil usuário" />
-            <h2 class="headerDashboard__title"><span>Olá</span><br>Carlos</h2>
+            <h2 class="headerDashboard__title"><span>Olá</span><br><span id="userNome">Carlos</span></h2>
         </header>
         <main>
             <div class="mainDashboard">
@@ -59,10 +61,75 @@
                 <div class="mainHabitsReports">
                     <h2>Relatórios diários</h2>
                     <p>Todos os seus dados em um único lugar.</p>
+                    <button class="link" id="pdf">Gerar Relatório PDF</button>
                 </div>
 
             </div>
             
         </main>
+
+        <script type="module">
+            import { supabase } from '/supabase-utils.js'
+
+            document.getElementById('pdf').addEventListener('click', function (){
+                generatePDF()
+            });
+
+            async function fetchRegistros() {
+                const { data, error } = await supabase
+                    .from('exercicios_usuario')
+                    .select('registro_id, usuario_id, exercicio_id, data_realizacao, tempo');
+
+                if (error) {
+                    console.error('Erro ao obter registros:', error);
+                    return [];
+                }
+
+                return data;
+            }
+
+            async function generatePDF() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF();
+
+                // Obter os dados dos registros
+                const registros = await fetchRegistros();
+
+                // Adicionar título ao PDF
+                doc.setFontSize(18);
+                doc.text('Relatório de Registros de Exercícios', 20, 20);
+
+                // Adicionar cabeçalhos da tabela
+                doc.setFontSize(12);
+                const headers = ["Registro ID", "Usuário ID", "Exercício ID", "Data Realização", "Tempo"];
+                let startY = 40;
+                let startX = 20;
+                headers.forEach((header, index) => {
+                    doc.text(header, startX + (index * 40), startY);
+                });
+
+                // Adicionar linhas de dados da tabela
+                startY += 10;
+                registros.forEach(registro => {
+                    doc.text(registro.registro_id.toString(), startX, startY);
+                    doc.text(registro.usuario_id, startX + 40, startY);
+                    doc.text(registro.exercicio_id.toString(), startX + 80, startY);
+                    doc.text(new Date(registro.data_realizacao).toLocaleDateString(), startX + 120, startY);
+                    doc.text(registro.tempo, startX + 160, startY);
+                    startY += 10;
+
+                    // Verificar se a posição y está perto do final da página e adicionar nova página se necessário
+                    if (startY > 280) {
+                        doc.addPage();
+                        startY = 20;
+                    }
+                });
+
+                // Salvar o PDF
+                doc.save('relatorio_registros.pdf');
+            }
+
+        </script>
+
     </body>
 </html>
