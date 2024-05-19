@@ -1,4 +1,4 @@
-# Projeto Integrador V: Desenvolvimento de sistemas orientado a dispositivos móveis e baseados na Web
+# Projeto Integrador V: Análise de Soluções Integradas para Organizações
 
 Objetivo do projeto
 -
@@ -12,9 +12,9 @@ exercícios físicos.
 
 As instruções aqui passadas possibilitam rodar o projeto localmente.
 
-1. Faça o clone do projeto localizado no repositório joaolucasMota/pi-quarto-semestre:
+1. Faça o clone do projeto localizado no repositório mari-red/pi-5-semestre-ads:
 
-`git clone https://github.com/mari-red/pi-5-semestre-ads`
+`git clone https://github.com/mari-red/pi-5-semestre-ads.git`
 
 2. Abra a pasta do projeto (raiz do projeto)
 
@@ -38,26 +38,36 @@ A aplicação SportFit funciona como um gerenciador de treinos esportivos.
     - Na próxima página (`jornada/step3-jornada/step3-jornada.html`), selecione a frequência de treino
 
 
-2. Para registrar um treino, deverá seguir os passos:
+2. Após finalizar a jornada, poderá registrar um treino, seguindo os passos:
     - Abra o arquivo: `dashboard/dashboard.html`
     - Clique em "Iniciar Treino"
     - Na próxima página (`meus-treinos/meus-treinos.html`), selecione uma modalidade
     - Clique em "Iniciar" para inicializar o contador de tempo, em "Finalizar"
       para parar o contador de tempo, e em "Resetar" para zerar o contador
 
+3. Emissão de relatório de exercícios:
+   - O usuário logado poderá emitir relatório com as informações dos treinos registrados.
+   - Abra o arquivo: `dashboard/dashboard.html`
+   - Clique em "Gerar Relatório PDF"
+
 
 ### Tecnologias utilizadas
 - Html, CSS e JavaScript
-- Supabase
+- Supabase (autenticação e banco de dados)
 
 
 ### Link do site
-`https://pi-sportfit-ads.netlify.app/` (TODO ainda falta fazer)
+`https://pi-sportfit-ads.netlify.app/` (FAZER)
 
-### Desenvolvedores
+### Grupo 22:
 
-Grupo 16:
-- Marina Lobato Ramos Vermelho
 - João Lucas Mota Marques Dias
-- Thalía Carneiro de Araújo 
+- Marina Lobato Ramos Vermelho
+- Thalia Carneiro de Araujo
+- Carolina Kazumi Nakamura 
+- Frederico Azzarini Neutzling 
+- Gabriel dos Santos Silva 
+- Gabriel Evaristo Vieira
+- Juvenal Silveira da Silva Neto
+
 

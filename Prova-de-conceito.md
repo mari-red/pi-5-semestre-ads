@@ -9,67 +9,64 @@ Dentre as funções previstas para o aplicativo, definimos como prova de
 conceito para ser desenvolvida a jornada do usuário e o registro do tempo 
 de um treino realizado.
 
-Para isso, devem ser desenvolvidas as segintes telas:
-- Início (página inicial)
-![inicial.png](docs%2Fimagens%2Finicial.png)
-
+Foram desenvolvidas as segintes telas:
 
 - Cadastro (usuários que entram pela primeira vez no serviço)
-![Cadastro.png](docs%2Fimagens%2FCadastro.png)
+
+O cadastro deve ser efetivado com a entrada dos dados referentes ao nome,
+e-mail e uma senha pessoal do usuário.
 
 
-- Login (usuários já cadastrados)
-![Login.png](docs%2Fimagens%2FLogin.png)
+- Início (página inicial)
+  
+O login deve ser efetuado somente através do e-mail e senha cadastrados
+pelo usuário.
 
 
-- Telas para registrar a jornada do usuário; 
-![jornada mobile.png](docs%2Fimagens%2Fjornada%20mobile.png)
-![jornada desktop.png](docs%2Fimagens%2Fjornada%20desktop.png)
+- Telas para registrar a jornada do usuário;
+
+As informações foram centralizadas numa única tela, onde são apresentados 
+os dados cadastrados na jornada, bem como possibilita o acesso às 
+funcionalidades de registrar o tempo de um treino e emitir um 
+relatório PDF com os registros dos treinos.
+
 
 
 - Telas para acessar e registrar o tempo do treino realizado
-![iniciar treino.png](docs%2Fimagens%2Finiciar%20treino.png)
-![meus treinos.png](docs%2Fimagens%2Fmeus%20treinos.png)
+
+Nessa tela, o usuário poderá selecionar a modalidade esportiva que 
+pretende executar, ativar um cronômetro quando iniciar o exercício e 
+pausá-lo quando finalizar. Além disso, para iniciar uma nova contagem 
+de tempo, poderá resetar o cronômetro.
+
+
 
 ## REVISITANDO O PROJETO
 
+Para o Projeto Integrador V, foi configurado o banco de dados (inexistente na primeira prova
+de conceito). Foi escolhida a ferramenta do Supabase, sendo utilizada tanto para a autenticação dos
+usuários (houve mudança do Firebase para o Supabase) quanto para o banco de dados.
+
+O banco de dados possui 4 tabelas, que incluem os registros dos usuários, características dos usuários,
+os tipos de exercícios, e os registros dos exercícios realizados pelo usuário.   
+
+Além disso, foi inserida a função de gerar relatório dos registros de exercícios.
 Ao revisitar o projeto original, identificamos necessidade de algumas 
 alterações nas telas relacionadas à prova de conceito, de forma que 
 pudessem ser adequadamente desenvolvidas:
 
-- Tela Login
-
-O login deve ser efetuado somente através do e-mail e senha cadastrados 
-pelo usuário.  
-Não serão apresentadas as opções de login com Google, Facebook ou Apple.
-
-- Tela Cadastro
-
-O cadastro deve ser efetivado com a entrada dos dados referentes ao nome,
-e-mail e uma senha pessoal do usuário.  
-Não será solicitada a inserção do dado relativo ao telefone.
-
-- Tela Menu Usuário (Dashboard)
-
-As informações foram centralizadas numa única tela, onde são apresentados os dados 
-cadastrados na jornada, bem como possibilita o acesso à funcionalidade de 
-registrar o tempo de um treino.
-
-
-- Tela Meus Treinos
-
-Nessa tela, o usuário poderá selecionar a modalidade esportiva que pretende 
-executar, ativar um cronômetro quando iniciar o exercício e pausá-lo quando 
-finalizar. Além disso, para iniciar uma nova contagem de tempo, 
-poderá resetar o cronômetro.
-
 
 ### Link do protótipo no Figma:
-`https://www.figma.com/file/oM62i81gcvRUpgisfNRUFC/PI?type=design&node-id=0-1&mode=design&t=Jlg14pB0RtQ5G1lP-0`
+https://www.figma.com/design/oM62i81gcvRUpgisfNRUFC/PI?node-id=0-1&t=L4KOKOSvqnEKW6Ne-0
 
 
-### Grupo 16:
+### Grupo 22:
 - João Lucas Mota Marques Dias
 - Marina Lobato Ramos Vermelho
-- Thalía Carneiro de Araújo 
+- Thalia Carneiro de Araujo
+- Carolina Kazumi Nakamura
+- Frederico Azzarini Neutzling
+- Gabriel dos Santos Silva
+- Gabriel Evaristo Vieira
+- Juvenal Silveira da Silva Neto
 
