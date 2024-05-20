@@ -1,4 +1,4 @@
-## PROVA DE CONCEITO
+## MVP
 
 Inicialmente, o projeto trata de um serviço cujo objetivo principal é 
 facilitar o acesso a treinamentos personalizados, informações sobre saúde e 
@@ -9,7 +9,7 @@ Dentre as funções previstas para o aplicativo, definimos como prova de
 conceito para ser desenvolvida a jornada do usuário e o registro do tempo 
 de um treino realizado.
 
-Foram desenvolvidas as segintes telas:
+O projeto possui as seguintes telas:
 
 - Cadastro (usuários que entram pela primeira vez no serviço)
 
@@ -25,14 +25,20 @@ pelo usuário.
 
 - Telas para registrar a jornada do usuário;
 
-As informações foram centralizadas numa única tela, onde são apresentados 
-os dados cadastrados na jornada, bem como possibilita o acesso às 
-funcionalidades de registrar o tempo de um treino e emitir um 
+São três telas onde o usuário logado poderá registrar suas características 
+como gênero, idade, altura, peso e frequência com que faz as atividades físicas.
+
+
+- Telas para acessar e registrar o tempo do treino realizado e para emitir
+relatório
+
+As informações foram centralizadas numa única tela, onde são apresentados
+os dados cadastrados na jornada, bem como possibilita o acesso às
+funcionalidades de registrar o tempo de um treino e emitir um
 relatório PDF com os registros dos treinos.
 
 
-
-- Telas para acessar e registrar o tempo do treino realizado
+- Tela Meus treinos
 
 Nessa tela, o usuário poderá selecionar a modalidade esportiva que 
 pretende executar, ativar um cronômetro quando iniciar o exercício e 
@@ -47,13 +53,10 @@ Para o Projeto Integrador V, foi configurado o banco de dados (inexistente na pr
 de conceito). Foi escolhida a ferramenta do Supabase, sendo utilizada tanto para a autenticação dos
 usuários (houve mudança do Firebase para o Supabase) quanto para o banco de dados.
 
-O banco de dados possui 4 tabelas, que incluem os registros dos usuários, características dos usuários,
+O banco de dados possui 4 tabelas, que incluem os registros dos usuários (SignUp), as características dos usuários,
 os tipos de exercícios, e os registros dos exercícios realizados pelo usuário.   
 
 Além disso, foi inserida a função de gerar relatório dos registros de exercícios.
-Ao revisitar o projeto original, identificamos necessidade de algumas 
-alterações nas telas relacionadas à prova de conceito, de forma que 
-pudessem ser adequadamente desenvolvidas:
 
 
 ### Link do protótipo no Figma:
