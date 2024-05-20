@@ -5,9 +5,9 @@ facilitar o acesso a treinamentos personalizados, informações sobre saúde e
 nutrição, servindo como um acompanhamento adequado para a prática de 
 exercícios físicos.  
 
-Dentre as funções previstas para o aplicativo, definimos como prova de 
-conceito para ser desenvolvida a jornada do usuário e o registro do tempo 
-de um treino realizado.
+Dentre as funções previstas para o aplicativo, definimos como produto mínimo viável
+o desenvolvimento da jornada do usuário, o registro do tempo 
+de um treino realizado e a possbilidade de emissão de relatório.
 
 O projeto possui as seguintes telas:
 
