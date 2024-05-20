@@ -57,7 +57,10 @@ A aplicação SportFit funciona como um gerenciador de treinos esportivos.
 
 
 ### Link do site
-`https://pi-sportfit-ads.netlify.app/` (FAZER)
+`https://sportfit-ads-pi.netlify.app/` 
+
+### Link do video demonstrativo
+`https://www.youtube.com/watch?v=8z_ggkvLKnE`
 
 ### Grupo 22:
 
